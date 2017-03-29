@@ -48,3 +48,19 @@ $navbar-default-bg: #073b15;
   color: #fff;
   text-decoration: none;
 }
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  padding-left: 3px;
+}
