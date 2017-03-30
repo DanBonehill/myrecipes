@@ -38,6 +38,8 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+  # Use rails-controller-testing
+  gem 'rails-controller-testing'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 end
