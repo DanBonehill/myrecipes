@@ -1,9 +1,18 @@
 <footer class="footer">
-  <ul>
-    <li>&copy; 2017 DanBonehill |</li>
-    <li><%= link_to "About", "#" %> |</li>
-    <li><%= link_to "Blog", "#" %> |</li>
-    <li><%= link_to "Contact", "#" %> |</li>
-    <li><%= link_to "Privacy", "#" %></li>
-  </ul>
+  <div class="row">
+    <div class="col-md-5">
+      <ul>
+        <li>&copy; 2017 DanBonehill |</li>
+        <li><%= link_to "About", "#" %> |</li>
+        <li><%= link_to "Blog", "#" %> |</li>
+        <li><%= link_to "Contact", "#" %> |</li>
+        <li><%= link_to "Privacy", "#" %></li>
+      </ul>
+    </div>
+    <div class="col-md-7">
+      <p>
+        Noticed a bug? <%= link_to "Let us know here", new_issue_path %>
+      </p>
+    </div>
+  </div>
 </footer>
