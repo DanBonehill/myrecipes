@@ -9,6 +9,11 @@
       <h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
       <p>
         <%= truncate(recipe.description, length: 150) %>
+        <% if recipe.ingredients.any? %>
+          <p>
+            Ingredients: <%= render recipe.ingredients %>
+          </p>
+        <% end %>
       </p>
       <p>
         <span class="quiet">

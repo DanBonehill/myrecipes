@@ -1,10 +1,12 @@
 class IngredientsController < ApplicationController
+  before_action :set_ingredient, only: [:edit, :update, :show]
   
   def index
     @ingredients = Ingredient.paginate(page: params[:page], per_page: 5)
   end
   
   def show
+    @ingredient_recipes = @ingredient.recipes.paginate(page: params[:page], per_page: 5)
   end
   
   def new
@@ -20,6 +22,12 @@ class IngredientsController < ApplicationController
   end
   
   def destroy
+  end
+  
+  private
+  
+  def set_ingredient
+    @ingredient = Ingredient.find(params[:id])
   end
   
 end
