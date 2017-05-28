@@ -59,6 +59,8 @@ end
 group :production do
   # Use Postgress as the database for Active Record
   gem 'pg'
+  # Use Redis adapter to run Action Cable in production
+  gem 'redis'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
