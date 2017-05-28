@@ -4,9 +4,12 @@ Rails.application.routes.draw do
   
   resources :recipes do
     resources :comments, only: [:create]
+<<<<<<< HEAD
     member do 
       post 'like'
     end
+=======
+>>>>>>> 81f328a649516b9e183065ad0c1533d05eaebb93
   end
     
   resources :issues
