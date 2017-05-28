@@ -2,7 +2,14 @@ Rails.application.routes.draw do
   root "pages#home"
   get "pages/home", to: "pages#home"
   
-  resources :recipes, :issues
+  resources :recipes do
+    resources :comments, only: [:create]
+    member do 
+      post 'like'
+    end
+  end
+    
+  resources :issues
   
   get "/signup", to: "chefs#new"
   
